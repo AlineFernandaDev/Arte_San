@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d3f8e2;
+}
+
+.rounded{
+  width: 100vh;
+}
+
+#container-text {
+  width: 550px;
+  height: 550px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+#card-text {
+  margin-left: 25%;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;  
+  border-radius: 5%;
+  background-color: rgba($color: #e4c1f9, $alpha: 0.5);
+}
+
+#logo {
+  width: 60%;
+}
+
+.input-border-radius-sm {
+  width: 300px;
+}
+
+.btn-outline-info {
+ width: 100%;
+ border-color: #e80b9f;
+ color: #e80b9f;
+ margin-bottom: 10%;
+}
+
+.btn-outline-info:hover {
+  background-color: #f694c1;
+  border-color:#f694c1;
+  color: #ede7b1;
+}
+
+.blockquote{
+  justify-items: center;
+  font-size: small;
+  margin-top: 5%;
+}
