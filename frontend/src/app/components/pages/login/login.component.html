@@ -1,156 +1,48 @@
-<div class="grid text-center">
-  <div class="g-col-2">
-    <div class="container-fluid" id="container-img">
-      <div classe="card" >
-        <img
-          src="./assets/atelie.png"
-          class="rounded float-start" id="criative"
-          alt=""
-        />
+<div class="container-fluid">
+  <div class="row g-0">
+    <div class="col-md-6 custom-col1">
+      <div clas="card">
+        <div class="card-body">
+          <figure class="figure">
+            <img
+              src="./assets/atelie.png"
+              alt=""
+              class="figure-img img-fluid rounded"
+              style="width: 90vh;"
+            />
+          </figure>
+        </div>
       </div>
-      <div class="grid text-center">
-        <div class="row">
-          <div class="container-fluid" id="container-text">
-            <div class="card" style="width: 25rem;" id="card-text">
-              <img src="./assets/logosf.png" class="card-img-top" id="logo"alt="" />
-              <p>Seus preços sem crise.</p>
-              <div classe="card-body">
-                <form [formGroup]="loginForm">
-                  <div class="input-border-radius-sm">
-                    <input
-                      type="text"
-                      formControlName="username"
-                      class="form-control is-invalid"
-                      id="validationServerUsername"
-                      aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
-                      formControlName="username"
-                      placeholder="Usuário"
-                      required
-                    />
-                    <div id="validationServer03Feedback" class="invalid-feedback">
-                      Por favor, insira um nome de usuário.
-                    </div>
-                  </div>
-                  <div class="input-border-radius-sm">
-                    <input
-                      type="password"
-                      formControlName="password"
-                      class="form-control is-invalid"
-                      id="validationServerUsername"
-                      aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
-                      formControlName="password"
-                      placeholder="Senha"
-                      required
-                    />
-                    <div id="validationServerPasswordFeedback" class="invalid-feedback">
-                      Por favor, insira uma senha válida.
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-outline-info">Login</button>
-                </form>
-              </div>
+    </div>
+    <div class="col-md-6 custom-col2">
+        <div class="card-text">
+          <figure class="figure-img img-fluid">
+            <img src="./assets/logosf.png" alt="" class="figure-img img-fluid rounded" style="width: 20vh;"/>
+          </figure>
+          <form [formGroup]="loginForm" class="needs-validation" >
+            <div class="input-group has validation-border-radius-sm">
+              <input type="text" class="form-control" id="validationCustomUsername" formControlName="username" aria-describedby="inputGroupPrepend" placeholder="Usuário" required>
             </div>
-          </div>
+            <div class="invalid-feedback">
+              Por favor, digite um usuário válido.
+            </div>
+            <div class="input-group has validation-border-radius-sm">
+              <input type="password" class="form-control" id="validationCustomUsername" formControlName="password" aria-describedby="inputGroupPrepend"  placeholder="Senha" required>
+            </div>
+            <div class="invalid-feedback">
+              Por favor, digite uma senha válida.
+            </div>
+            <div *ngIf="errorMensage" class="invalid-feedback" >
+             {{ errorMensage }} 
+            </div>
+            <div class="btn">
+              <button class="btn btn-primary" (click)="onSubmit()" (ngSubmit)="onSubmit()"  type="submit">Enviar</button>
+            </div>
+            <div class="link-opacity-75-hover"><a href="#">Esqueceu sua senha?</a></div>
+            <div class="link-opacity-75-hover"><a href="#">Cadastre-se</a></div>
+          </form>
         </div>
-      </div>
     </div>
+    <div class="col-md-0">Aline Fernanda Developer &copy; 2024</div>
   </div>
-</div>
-<blockquote class="blockquote">
-  <p>&copy; Aline Fernanda Developer -2024.</p>
-</blockquote>
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="row g-0">
-  <div class="col-md-4">
-    <img
-      src="./assets/criative-think.png"
-      class="img-fluid rounded-start"
-      alt=""
-    />
-  </div>
-
-  <div class="col-md-8 d-flex justify-content-end">
-    <div class="card">
-      <form class="card-body d-flex flex-column justify-content-center align-items-center">
-       
-        
-        <div class="input-border-radius-lg">
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="validationServerUsername"
-            aria-describedby= "inputGroupPrepend3 validationServerUsernameFeedback"
-            formControlName="username"
-            placeholder="Usuário"
-            required
-          />
-          <div id="validationServer03Feedback" class="invalid-feedback">
-            Por favor, insira um nome de usuário.
-          </div>
-        </div>
-
-        <div class="input-border-radius-lg">
-          <input
-            type="password"
-            class="form-control is-invalid"
-            id="validationServerPassword"
-            aria-describedby="validationServerPasswordFeedback"
-            formControlName="password"
-            placeholder="Senha"
-            required
-          />
-          <div id="validationServerPasswordFeedback" class="invalid-feedback">
-            Por favor, insira uma senha válida.
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Login</button>
-      </form>
-    </div>
-  </div>
-</div>
--->
-
-<!-- <div clas="container-fluid"></div>
-<form [formGroup]="loginForm"></form>
-<div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <div class="card-body">
-        <div class="mb-3">
-          <input
-            type="email"
-            class="form-control"
-            formControlName="username"
-            placeholder="Usuário"
-          />
-          <input
-            type="password"
-            class="form-control"
-            formControlName="password"
-            placeholder="Senha"
-          />
-        </div>
-        <button btn class="btn btn-primary">Login</button>
-      </div>
-    </form>
-    </div>
-  </div>
-
-
- 
-
-  <div class="card" style="width: 18rem;"">
-    <img src="./assets/criative-think.png" class="rounded float-start" alt="" />
-  </div>
--->
+</div>  
